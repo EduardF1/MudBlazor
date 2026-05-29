@@ -30,8 +30,12 @@
 
   & .mud-card-header-actions {
     flex: 0 0 auto;
-    align-self: flex-start;
-    margin-top: -8px;
+    align-self: center;
+    // Zero in-flow height: the actions overflow the slot symmetrically, so a 48px icon button
+    // is centred on the header without changing the header height (#12719).
+    height: 0;
+    display: flex;
+    align-items: center;
     margin-right: -8px;
     margin-inline-end: -8px;
     margin-inline-start: unset;
